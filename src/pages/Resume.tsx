@@ -1,4 +1,6 @@
 import { FiDownload, FiCheckCircle, FiUser, FiTarget, FiCode } from 'react-icons/fi';
+import resume from '../assets/FrancineAnne_Bhaunani_Resume.pdf';
+
 
 const Resume = () => {
   return (
@@ -62,7 +64,7 @@ const Resume = () => {
             Download my complete, formatted resume in PDF format.
           </p>
           <a 
-            href="/resume.pdf"
+            href={resume}
             download
             className="btn-primary" 
             style={{ 
