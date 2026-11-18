@@ -1,7 +1,6 @@
 import { FiDownload, FiCheckCircle, FiUser, FiTarget, FiCode } from 'react-icons/fi';
 import resume from '../assets/FrancineAnne_Bhaunani_Resume.pdf';
 
-
 const Resume = () => {
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '5rem 2rem' }}>

@@ -10,7 +10,7 @@
   
   --accent-color: #7c5295; 
   --accent-light: #9d74b8; 
-  --nav-highlight: #9d74b8; /* Light purple for navbar */
+  --nav-highlight: #9d74b8;
   
   --brand-color: #7c5295;
   --border-color: rgba(124, 82, 149, 0.15); 
@@ -29,8 +29,8 @@ body.dark {
   --text-muted: #A7EBF2;
   --text-light: #FFFFFF;
   --accent-color: #7B337E;
-  --accent-light: #54ACBF; /* Cyan for card borders */
-  --nav-highlight: #e8a0ed; /* Light purple for navbar active state */
+  --accent-light: #54ACBF;
+  --nav-highlight: #e8a0ed;
   
   --brand-color: #F5D5E0;
   --border-color: rgba(84, 172, 191, 0.25); 
@@ -543,34 +543,69 @@ select option {
     grid-template-columns: 1fr !important;
   }
 
-  /*Mobile Navbar*/
-  .mobile-toggle {
-    display: block !important;
-  }
-  
-  .nav-links {
-    display: none !important;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background: var(--nav-bg);
-    padding: 2rem;
-    gap: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  }
-  
-  .nav-links.open {
-    display: flex !important;
-  }
 
-  .nav-links a {
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-  }
+/* Mobile Navbar */
+.mobile-toggle {
+  display: block !important;
+}
+.nav-links {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch !important;
+
+  position: fixed;
+  top: 90px;
+  right: 16px;
+  left: auto;
+
+  width: min(150px, calc(100vw - 32px));
+  height: auto;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    145deg,
+    rgba(66, 13, 75, 0.98),
+    rgba(33, 6, 53, 0.98)
+  );
+
+  padding: 1.25rem !important;
+  gap: 0.5rem !important;
+
+  border: 1px solid rgba(205, 108, 210, 0.4);
+  border-radius: 18px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4),
+              0 0 15px rgba(123, 51, 126, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: all 0.3s ease;
+  z-index: 49;
+}
+
+.nav-links.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-links li {
+  width: 100%;
+}
+
+.nav-links a {
+  background: transparent !important;
+  border-radius: 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: transparent !important;
+}
 }
 
 @media (max-width: 480px) {
