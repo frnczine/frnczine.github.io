@@ -16,7 +16,7 @@ const Navbar = () => {
       if (isClicking.current) return;
 
       const sections = ['home', 'about', 'projects', 'resume', 'services', 'contact'];
-      const scrollPosition = window.scrollY + 120; // Just below your 80px navbar
+      const scrollPosition = window.scrollY + 120;
 
       let currentSection = 'home';
 
@@ -101,10 +101,10 @@ const Navbar = () => {
           onClick={() => handleNavClick('home')}
           style={{ textDecoration: 'none', color: 'var(--brand-color)', fontSize: '1.5rem', fontWeight: 900, letterSpacing: '3px' }}
         >
-          <span><span style={{ color: 'var(--accent-color)' }}>//</span> FRNCZNE</span>
+          <span><span style={{ color: 'var(--accent-color)' }}>//</span> FRNCZINE</span>
         </a>
 
-        {/* DESKTOP LINKS */}
+        {/*DESKTOP*/}
         <ul 
           className={`nav-links ${isOpen ? 'open' : ''}`}
           style={{
