@@ -1,4 +1,5 @@
 import { FiCode, FiCpu, FiTool, FiMapPin, FiBookOpen, FiAward, FiUsers } from 'react-icons/fi';
+import ScrollRevealTextEffect from '../components/TextEffect';
 
 const About = () => {
   return (
@@ -7,14 +8,14 @@ const About = () => {
       <div style={{ width: '60px', height: '3px', background: 'var(--accent-color)', margin: '0.5rem 0 1.5rem 0' }}></div>
       <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--text-light)', marginBottom: '1.5rem' }}>More Than Just Code</h2>
       
-      {/*INTRO (detailed)*/}
-      <div style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '4rem', maxWidth: '800px' }}>
-        <p style={{ marginBottom: '1rem' }}>
-          I am a 4th-year Bachelor of Science in Information Technology student at <strong>De La Salle University – Dasmariñas</strong>, specializing in Web Development. My journey in tech started with a fascination for how design and code come together to solve real-world problems.
-        </p>
-        <p>
-          I am deeply passionate about building user-centric web applications. Beyond just writing code, I focus on ensuring software reliability through Quality Assurance by checking validations, error handling, and responsiveness. I thrive in collaborative team environments, adapting quickly to emerging technologies and continuously broadening my expertise.
-        </p>
+      {/* INTRO (detailed) */}
+      <div style={{ fontSize: '1.1rem', marginBottom: '4rem', maxWidth: '800px' }}>
+
+        <ScrollRevealTextEffect
+          text="I am a 4th-year Bachelor of Science in Information Technology student at De La Salle University – Dasmariñas, specializing in Web Development. My journey in tech started with a fascination for how design and code come together to solve real-world problems. 
+          I am deeply passionate about building user-centric web applications. Beyond just writing code, I focus on ensuring software reliability through Quality Assurance by checking validations, error handling, and responsiveness. I thrive in collaborative team environments, adapting quickly to emerging technologies and continuously broadening my expertise."
+        />
+
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-main)', fontWeight: 600, marginTop: '1.5rem' }}>
           <FiMapPin color="var(--accent-color)" /> Based in Cavite, Philippines
         </div>

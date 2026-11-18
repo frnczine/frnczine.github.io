@@ -221,3 +221,17 @@
 .back-to-top svg {
   pointer-events: none;
 }
+/*scroll reveal text effect*/
+.scroll-reveal-text {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.scroll-reveal-text span {
+  color: color-mix(in srgb, var(--text-muted) 30%, transparent);
+  transition: color 0.2s ease;
+}
+
+.scroll-reveal-text span.revealed {
+  color: var(--text-muted);
+}
