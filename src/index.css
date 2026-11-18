@@ -545,7 +545,6 @@ select option {
     grid-template-columns: 1fr !important;
   }
 
-
 /* Mobile Navbar */
 .mobile-toggle {
   display: block !important;
@@ -627,4 +626,8 @@ select option {
     width: 160px;
     height: 160px;
   }
+}
+/*for pc*/
+.mobile-toggle {
+  display: none;
 }

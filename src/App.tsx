@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import useLenis from './hooks/useLenis';
+import BackToTop from './components/BackToTop';
+import './App.css';
 
 /*COMPONENTS */
 import Navbar from './components/Navbar';
@@ -35,6 +37,7 @@ function App() {
         <section id="services" className="scroll-mt-24"><Services/></section>
         <section id="contact" className="scroll-mt-24"><Contact/></section>
       </main>
+      <BackToTop />
       <Footer />
     </div>
   );
