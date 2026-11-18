@@ -16,25 +16,28 @@ const Navbar = () => {
       if (isClicking.current) return;
 
       const sections = ['home', 'about', 'projects', 'resume', 'services', 'contact'];
-      const scrollPosition = window.scrollY + 100; // 100px offset for navbar
+      const scrollPosition = window.scrollY + 120; // Just below your 80px navbar
 
       let currentSection = 'home';
-      let minDistance = Infinity;
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
-          const distance = Math.abs(element.offsetTop - scrollPosition);
-          
-          if (distance < minDistance) {
-            minDistance = distance;
+          const top = element.offsetTop;
+          const height = element.offsetHeight;
+
+          if (scrollPosition >= top && scrollPosition < top + height) {
             currentSection = section;
+            break;
           }
         }
       }
-      
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        currentSection = 'contact';
+      }
       setActiveSection(currentSection);
     };
+
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
