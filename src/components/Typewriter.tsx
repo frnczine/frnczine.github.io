@@ -25,16 +25,20 @@ const Typewriter = ({ text, speed = 30 }: TypewriterProps) => {
     }
   }, [currentIndex, text, speed]);
 
+  const isTyping = currentIndex < text.length;
+
   return (
     <span>
       {displayedText}
-      <span 
-        style={{ 
-          borderRight: '2px solid var(--accent-light)', 
-          animation: 'blink 1s step-end infinite', 
-          marginLeft: '2px' 
-        }}
-      ></span>
+      {isTyping && (
+        <span
+          style={{
+            borderRight: '2px solid var(--accent-light)',
+            animation: 'blink 1s step-end infinite',
+            marginLeft: '2px',
+          }}
+        />
+      )}
     </span>
   );
 };
