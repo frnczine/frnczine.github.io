@@ -89,17 +89,17 @@ const About = () => {
         <div style={{ borderLeft: '2px solid var(--accent-color)', paddingLeft: '2rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           
           <div style={{ position: 'relative' }}>
-            <div style={{ position: 'absolute', left: '-2.4rem', top: '0', background: 'var(--accent-color)', borderRadius: '50%', padding: '4px' }}><FiBookOpen color="white" size={16} /></div>
-            <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-light)' }}>BS Information Technology</h4>
+            <div style={{ position: 'absolute', left: 'calc(-2rem - 15px)', top: '0', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--accent-color)', borderRadius: '50%' }}><FiBookOpen color="white" size={14} /></div>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-light)' }}>Bachelor of Science in Information Technology</h4>
             <p style={{ color: 'var(--accent-light)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.5rem' }}>De La Salle University – Dasmariñas | 2023 - Present</p>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-              Specialization in Web Development. <br />
+              Specialization in Web Development <br />
               <strong>Dean’s Lister:</strong> 1st Sem (A.Y. 2023–2024), 2nd Sem (A.Y. 2024–2025), 1st & 2nd Sem (A.Y. 2025–2026).
             </p>          
             </div>
 
           <div style={{ position: 'relative' }}>
-            <div style={{ position: 'absolute', left: '-2.4rem', top: '0', background: 'var(--accent-color)', borderRadius: '50%', padding: '4px' }}><FiAward color="white" size={16} /></div>
+            <div style={{ position: 'absolute', left: 'calc(-2rem - 15px)', top: '0', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--accent-color)', borderRadius: '50%' }}><FiAward color="white" size={14} /></div>
             <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-light)' }}>Leadership</h4>
             <p style={{ color: 'var(--accent-light)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.5rem' }}>Class Vice President (2023-2025)</p>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>
