@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import useLenis from './hooks/useLenis';
 
 /*COMPONENTS */
 import Navbar from './components/Navbar';
@@ -13,6 +14,7 @@ import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
 function App() {
+  useLenis();
   useEffect(() => {
     const currentTheme = localStorage.getItem('theme') || 'dark';
     if (currentTheme === 'dark') {
